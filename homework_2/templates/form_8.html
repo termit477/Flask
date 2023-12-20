@@ -1,0 +1,22 @@
+{% extends "loyout.html" %}
+
+{% block content %}
+<div class="container m-3">
+    <form method=post>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+
+        <input type="text" name="name">
+        <input type="submit" , value="Отправить">
+    </form>
+</div>
+{% endblock content %}

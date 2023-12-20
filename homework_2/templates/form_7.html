@@ -1,0 +1,17 @@
+{% extends "loyout.html" %}
+
+{% block content %}
+<div class="container m-3">
+    {% if number %}
+    <div class="container mb-3">
+        <p>Квадрат числа {{ number }} = {{ result }}</p>
+    </div>
+    {% endif %}
+
+
+    <form method=post>
+        <input type="number" name="number">
+        <input type="submit" , value="Отправить">
+    </form>
+</div>
+{% endblock content %}
